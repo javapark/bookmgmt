@@ -17,11 +17,9 @@ function App() {
   return (
     <div>
       <h1>ISBN Scanner</h1>
-      {isbn ? (
-        <div>
+      <div>
           <h2>ISBN: {isbn}</h2>
         </div>
-      ) : (
         <QrReader
           constraints={{ facingMode: "environment" }}
           delay={300}
@@ -29,7 +27,6 @@ function App() {
           onScan={handleScan}
           style={{ width: "100%" }}
         />
-      )}
     </div>
   );
 }
